@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laper</title>
+    <link rel="stylesheet" href="body_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <script>
+        // Fungsi untuk menyorot hasil pencarian
+        function searchProducts() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const products = document.querySelectorAll('.kartu-produk');
+            
+            // Menyembunyikan semua produk terlebih dahulu
+            products.forEach(product => {
+                product.style.display = 'none';
+            });
+    
+            // Jika search term ada, tampilkan produk yang cocok
+            products.forEach(product => {
+                const title = product.querySelector('h2').textContent.toLowerCase();
+                const description = product.querySelector('.deskripsi').textContent.toLowerCase();
+    
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    product.style.display = 'block';  // Menampilkan produk yang cocok
+                }
+            });
+    
+            // Jika tidak ada yang cocok, beri notifikasi kepada pengguna
+            if (searchTerm === "") {
+                products.forEach(product => {
+                    product.style.display = 'block';  // Menampilkan semua produk jika search kosong
+                });
+            }
+        }
+    
+        // Event listener untuk tombol pencarian
+        document.getElementById('search-button').addEventListener('click', searchProducts);
+    
+        // Event listener untuk enter pada input
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                searchProducts();
+            }
+        });
+    </script>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#Beranda">Laper</a></div>
+            <div class="cari">
+                <input type="text" id="search-input" placeholder="Cari...">
+                <button type="submit" id="search-button">Cari</button>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#Beranda">Beranda</a></li>
+                    <li><a href="#Tentang">Tentang</a></li>
+                    <li><a href="#Produk">Produk</a></li>
+                    <li><a href="#Lokasi">Lokasi</a></li>
+                    <li><a href="#Kontak">Kontak</a></li>
+                    <li><a href="form.html" class="tbl">Bergabung</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+        
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="gudeg.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Rendang.png" alt="Chicago" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                <h3>Chicago</h3>
+                <p>Thank you, Chicago!</p>
+                </div> 
+            </div>
+            <div class="carousel-item">
+                <img src="sate maranggi.jpeg" alt="New York" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                <h3>New York</h3>
+                <p>We love the Big Apple!</p>
+                </div>  
+            </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    
+    <div class="container-fluid mt-3">
+        <h3>Carousel Example</h3>
+        <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+    </div>
+        </div>
+    <div class="wrapper">
+        <section id="Beranda">
+            <img src="section_1_photo.png" alt="">
+            <div class="kolom">
+                <p class="deskripsi">Kamu Laper YAKK..??</p>
+                <h2>DUHH LAPER BINGITSS...</h2>
+                <p>Tenang ajaaaa, kini gak perlu khawatir perut keroncongan lagi. tinggal buka handphone, <br> terus katakan <span>ASIAAPPP</span> menu spesial datang menghampirimu WKWKWKWK</p>
+                <p><a href="#Tentang" class="tbl">Pelajari Lebih Lanjut</a></p>
+            </div>
+        </section>
+        <section id="Tentang">
+            <div class="kolom">
+                <p class="deskripsi">Solusi Tepat untuk perutmu</p>
+                <h2>Laper Kann...??</h2>
+                <p>Indonesia sangat kaya dengan beranekaragam makanan khas tersendiri. Kami menghadirkan sebuah solusi untuk perut anda dengan layanan <span>Laper</span> kami yang akan menyediakan teleportasi makanan ke hadapan anda dalam sekejap dengan layanan bebas ongkir dan bebas polusi WKWKWK</p>
+                <p><a href="#Produk" class="tbl">Layanan Kami</a></p>
+            </div>
+            <img src="section_2.jpg" alt="">
+        </section>
+        <section id="Produk">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">Terbaik Untuk Perutmu</p>
+                    <h2>Produk Laper</h2>
+                    <p>Layanan istimewa dengan harga terjangkau! Stop Laper, start kenyang!</p>
+                </div>
+                <div class="produk-list">
+                    <div class="kartu-produk" a>
+                        <img src="rendang1.jpg" alt="">
+                        <h2>Rendang</h2>
+                        <p class="deskripsi">Hidangan asal Sumatera Barat ini sudah sangat mendunia! Cita rasa yang pedas gurih yang memanjakan lidah anda....</p>
+                        <p class="tblbeli"><a href="details.html#D1">Beli Sekarang</a></p>
+                    </div>
+                    <div class="kartu-produk" a>
+                        <img src="sate maranggi.jpeg" alt="">
+                        <h2>Sate</h2>
+                        <p class="deskripsi">Nikmati kelezatan Sate Maranggi, sate daging sapi yang empuk dan dibumbui dengan rempah-rempah khas...
+                        </p>
+                        <p class="tblbeli"><a href="details.html#D2">Beli Sekarang</a></p>
+                    </div>
+                    <div class="kartu-produk" a>
+                        <img src="ketoprak.jpeg" alt="">
+                        <h2>Ketoprak</h2>
+                        <p class="deskripsi">Nikmati kelezatan ketoprak Betawi dengan campuran tahu, bihun, dan lontong, disiram saus kacang gurih...
+                        </p>
+                        <p class="tblbeli"><a href="details.html#D3">Beli Sekarang</a></p>
+                    </div>
+                    <div class="kartu-produk" a>
+                        <img src="gudeg.jpg" alt="">
+                        <h2>Gudeg</h2>
+                        <p class="deskripsi">Nikmati kelezatan Gudeg Jogja, nasi yang disajikan dengan nangka muda dimasak dalam santan kental dan rempah...
+                        </p>
+                        <p class="tblbeli"><a href="details.html#D4">Beli Sekarang</a></p>
+                    </div>
+                    <div class="kartu-produk" a>
+                        <img src="bubur manado.jpeg" alt="">
+                        <h2>Bubur</h2>
+                        <p class="deskripsi">Nikmati kehangatan Bubur Manado, hidangan khas Sulawesi Utara yang terdiri dari nasi yang dimasak dengan sayuran...
+                        </p>
+                        <p class="tblbeli"><a href="details.html#D5">Beli Sekarang</a></p>
+                    </div>
+                    <div class="kartu-produk" a>
+                        <img src="ayam betutu.jpeg" alt="">
+                        <h2>Ayam Betutu</h2>
+                        <p class="deskripsi">Nikmati kelezatan Ayam Betutu Bali, ayam yang dimasak perlahan dengan bumbu rempah khas Bali...
+                        </p>
+                        <p class="tblbeli"><a href="details.html#D6">Beli Sekarang</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Lokasi">
+                <div class="kolom">
+                    <p class="deskripsi">kunjungi</p>
+                    <h2>Toko Kami</h2>
+                    <p>Jl. Swadarma Raya No.58, Ulujami, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12250</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2552380323796!2d106.75826387378011!3d-6.2300436610097165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1f55c77145d%3A0x1e2ed99435c9cd21!2sTANRI%20ABENG%20UNIVERSITY!5e0!3m2!1sid!2sid!4v1730698134409!5m2!1sid!2sid" width="500" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="Kontak">
+            <div class="kanan">
+                <div class="kolom">
+                    <p class="deskripsi">Hubungi</p>
+                    <h2>Kontak Kami</h2>
+                    <p>if you want to reserve a table in our restaurant, contact us and we wll <br> attend you quickly, with our 24/7 chat service.</p>
+                    <div class="tblkanan">
+                        <p><a href="#Kontak" class="tbl">contact</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="wrapper">
+        <div class="footer">
+            <div class="footer-section">
+                <h3>Tim</h3>
+                <p>M. Zaid Anshori</p>
+                <p>Siti Disyah</p>
+                <p>Daffa Kuswardana</p>
+            </div>
+            <div class="footer-section">
+                <h3>Tentang</h3>
+                <p>WhatsApp</p>
+                <p>Intagram</p>
+                <p>Email</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>m.zaidanshori@student.tau.ac.id</p>
+                <p>daffa.kuswardana.@student.tau.ac.id</p>
+                <p>siti.disyah.@student.tau.ac.id</p>
+            </div>
+        </div>
+    </div>
+    <div id="Copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>Laper</b> All Rights Reserved. Zaid | Disyah | Daffa
+        </div>
+    </div>
+</body>
+</html>

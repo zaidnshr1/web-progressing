@@ -1,0 +1,261 @@
+* {
+    text-decoration: none;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    width:1100px;
+    margin:auto;
+    position:relative;
+}
+
+.logo a {
+    font-size: 25px;
+    font-weight: bold;
+    color:#000B58;
+    float:left;
+    margin-right:25px;
+}
+
+.cari input {
+    width: 300px;
+    padding:15px;
+    margin-top:15px;
+    border-radius:15px;
+    border:none;
+    background-color:#FFF4B7;
+    color:#000B58;
+    font-weight:bolder;
+    box-shadow: 1px 1px 3px 0px  #006A67;
+}
+
+.cari button {
+    width:70px;
+    margin-left:15px;
+    padding-top: 15px;
+    padding-bottom:15px;
+    border-radius:15px;
+    border:none;
+    background-color:#FFF4B7;
+    box-shadow: 1px 1px 3px 0px  #006A67;
+    color:#006A67;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.cari {
+    float:left;
+}
+
+.menu {
+    float:right;
+}
+
+nav {
+    width:100%;
+    margin:auto;
+    display:flex;
+    line-height:80px;
+    position:sticky;
+    top:0;
+    background-color:#FFFFFF;
+    z-index: 50;
+}
+
+nav ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+
+nav ul li {
+    float:left;
+}
+
+nav ul li a {
+    color:#006A67;
+    font-weight: bold;
+    text-align: center;
+    padding-right:25px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.wrapper #Beranda img {
+    width:450px;
+    aspect-ratio:1/1;
+    object-fit: cover;
+}
+
+section {
+    margin:auto;
+    display:flex;
+    margin-bottom:10px;
+    padding:35px;
+}
+
+.kolom {
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000B58;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom:20px;
+    color:#006A67;
+    width:100%;
+    line-height:50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a.tblberanda {
+    background-color:#003161;
+    border-radius: 15px;
+    margin-top:20px;
+    padding:15px 20px 15px 20px;
+    color:#FFF4B7;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px 0px  #006A67;
+}
+
+a.tbl {
+    background-color:#003161;
+    border-radius: 20px;
+    margin-top:15px;
+    margin-right: 20px;
+    padding:15px 20px 15px 20px;
+    color:#FFF4B7;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px 0px  #006A67;
+}
+
+a.tbl:hover {
+    background-color: #FFF4B7;
+    color: #003161;
+}
+
+p {
+    margin:10px 0px 10px 0px;
+    padding:10px 0px 10px 0px;
+}
+
+.kolom p span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    color: #000B58;
+    text-decoration: underline;
+}
+
+.wrapper #Tentang img {
+    width:400px;
+    height:400px;
+    aspect-ratio:2/1;
+    margin-left:100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tengah {
+    text-align: center;
+    width:100%;
+}
+
+.produk-list {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.kartu-produk {
+    width:300px;
+    height:400px;
+    background-color: #FFF4B7;
+    box-shadow:1px 1px 3px 0px #006A67 ;
+    border-radius:25px;
+}
+
+.kartu-produk img {
+    width:140px;
+    height:140px;
+    object-fit: cover;
+}
+
+.produk-list .tblbeli a {
+    background-color:#003161;
+    border-radius: 20px;
+    margin-right: 20px;
+    padding:15px 20px 15px 20px;
+    color:#FFF4B7;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px 0px  #006A67;
+}
+
+.produk-list .tblbeli {
+    margin-top:40px;
+    margin-left:20px;
+}
+
+iframe {
+    box-shadow: 1px 1px 3px 0px  #006A67;
+}
+
+.kanan {
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+    width: 100px;
+    line-height: 50px;
+}
+
+#Copyright {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    margin-top: 50px;
+}

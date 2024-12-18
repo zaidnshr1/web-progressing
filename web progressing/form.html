@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+    <script>
+        function validateAndSubmit(event) {
+            // Mencegah form untuk submit secara langsung
+            event.preventDefault();
+
+            // Ambil nilai inputan dari form
+            var nama = document.querySelector('input[placeholder="NAMA"]').value;
+            var nim = document.querySelector('input[placeholder="NIM"]').value;
+            var email = document.querySelector('input[placeholder="EMAIL TAU"]').value;
+            var telepon = document.querySelector('input[placeholder="NO. TELP"]').value;
+            var jurusan = document.querySelector('select').value; // Ambil jurusan yang dipilih
+            var batch = document.querySelectorAll('select')[1].value; // Ambil batch yang dipilih
+
+            // Validasi: cek apakah ada input yang kosong
+            if (!nama || !nim || !email || !telepon || !jurusan || !batch) {
+                alert('Semua field harus diisi!');
+                return;
+            }
+
+            // Tampilkan data dalam pop-up konfirmasi
+            var confirmation = confirm(
+                'Apakah data yang Anda masukkan sudah benar?\n' +
+                'Nama Mahasiswa: ' + nama + '\n' +
+                'NIM: ' + nim + '\n' +
+                'Email TAU: ' + email + '\n' +
+                'Nomor Telepon: ' + telepon + '\n' +
+                'Jurusan: ' + jurusan + '\n' +
+                'Batch: ' + batch
+            );
+
+            // Jika pengguna mengonfirmasi, lanjutkan ke body_dashboard.html
+            if (confirmation) {
+                window.location.href = 'body_dashboard.html'; // Arahkan ke halaman body_dashboard.html
+            }
+        }
+    </script>
+    <h1>FORMULIR KULINER</h1>
+    <form onsubmit="validateAndSubmit(event)">
+        <fieldset>
+            <p>Nama Mahasiswa</p>
+            <input type="text" placeholder="NAMA">
+            <p>NIM</p>
+            <input type="number" placeholder="NIM">
+            <p>Email TAU</p>
+            <input type="email" placeholder="EMAIL TAU">
+            <p>Nomor Telepon</p>
+            <input type="number" placeholder="NO. TELP">
+            <p>Jurusan</p>
+            <select name="" id="">
+                <option value="">--Pilih Jurusan--</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Perminyakan">Teknik Perminyakan</option>
+                <option value="Teknik Industri">Teknik Industri</option>
+                <option value="Teknik Sipil">Teknik Sipil</option>
+                <option value="Komunikasi">Komunikasi</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+            </select>
+            <p>Batch</p>
+            <select name="" id="">
+                <option value="">--Pilih Batch--</option>
+                <option value="Batch 13">Batch 13</option>
+                <option value="Batch 12">Batch 12</option>
+                <option value="Batch 11">Batch 11</option>
+                <option value="Batch 10">Batch 10</option>
+                <option value="Batch 9">Batch 9</option>
+            </select>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
